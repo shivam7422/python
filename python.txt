@@ -1,0 +1,187 @@
+									Python
+Python is an interpreted, high-level, general-purpose programming language,Created by Guido van Rossum and first released in 1991.
+Python's design philosophy emphasizes code readability with its notable use of significant whitespace.
+
+>> Why python is required-
+
+>> where we use python- Business Applications, Software Development, Education, Machine Learning and Artificial Intelligence, Data Science and Data Visualization.
+									
+									Lets get started
+
+>> Variables- Where we have to store the values are called variables. For ex:- x=10. Here x-> variable and 10 is value.
+
+>> Data Types- Types where we can store the data like string, integer, float etc.
+
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+
+For ex-
+		
+X=” Hello World”			        str
+x = 20						int	
+x = 20.5					float	
+x = 1j						complex	
+x = ["apple", "banana", "cherry"]		list	
+x = ("apple", "banana", "cherry")		tuple	
+x = range(6)					range	
+x = {"name" : "John", "age" : 36}		dict	
+x = {"apple", "banana", "cherry"}		set	
+x = frozenset({"apple", "banana", "cherry"})	frozenset	
+x = True					bool	
+x = b"Hello"					bytes	
+x = bytearray(5)				bytearray	
+x = memoryview(bytes(5))			memoryview	
+
+>> Python casting- There may be times when you want to specify a type on to a variable. This can be done with casting. There are 3 types to do-
+
+	>>  int() - constructs an integer number from an integer literal, a float literal or a string literal (providing the string represents a whole number)
+   	>> float() - constructs a float number from an integer literal, a float literal or a string literal (providing the string represents a float or an integer)
+ 	>>  str() - constructs a string from a wide variety of data types, including strings, integer literals and float literals.
+for ex-
+
+int-
+x = int(1)   # x will be 1
+y = int(2.8) # y will be 2
+z = int("3") # z will be 3
+
+float
+x = float(1)     # x will be 1.0
+y = float(2.8)   # y will be 2.8
+z = float("3")   # z will be 3.0
+w = float("4.2") # w will be 4.2
+
+str
+x = str("s1") # x will be 's1'
+y = str(2)    # y will be '2'
+z = str(3.0)  # z will be '3.0' 
+
+							>> python String (23-APR-2019)
+
+- We can't concatenate the string with the numbers( it can be any string). To do this, we have to use FORMAT keyword. Below is the example-
+
+s=200
+d= print(" the number is " +s)
+print (d) ->>>output--> TypeError: can only concatenate str (not "int") to str
+
+----- The correct way to do is as mentioned below-
+s=200
+d= " the number is {}"
+ print(d.format(s))  -->> output- the number is 200.
+
+we can work with multiple numbers like-
+
+s=200
+e=300
+f=400
+g=s+e+f
+d=" the number is {},{} and {} and the addition of 3 numbers are {} "
+print(d.format(s,e,f,g)) -->> output- the number is 200,300 and 400 and the addition of 3 numbers are 900
+
+
+>> Multiline Strings- We have to use three double quotes to assign multiline String
+
+s= """ this is me,
+this is you,
+this is someone else """
+print(s)
+
+>> Length of String- We have length function to get the length of the String (including spaces)-
+
+s= "This is me"
+print(len(s)) --> output-> 10
+
+>> String Methods-- 
+	
+> strip- It will remove the spaces from the starting and the ending-
+p= " hello world "
+print(p.strip())-- > output -- > hello world
+
+> lower- Converts all the character from upper to lower-
+p= " HELLO WORLD "
+print(p.lower()) --> output --> hello world
+
+> upper- Converts All the charcater from lower to Upper
+p= " hello world "
+print(p.upper()) --> output --> HELLO WORLD
+
+> replace -- replaced from --> to
+p= " hello world "
+print(p.replace(" hello", " bye")) --> output --> bye world
+
+> capitalize- Converts the first character to upper case
+p= "hello World"
+print(p.capitalize()) --> output --> Hello world
+
+> count-- Returns the number of times a specified value occurs in a string
+p= " this is some this is you this is me "
+print(p.count("this")) --> output --> 3
+
+> find-Searches the string for a specified value and returns the position of where it was found
+p= "hello World"
+print(p.find("ell"))--> output --> 1
+
+> isalnum()- Returns True if all characters in the string are alphanumeric
+p= "bottle12344"
+print(p.isalnum()) --> output --> True
+q= " bottle1234"
+print(p.isalnum()) --> output --> False
+q= "bottle1234@"
+print(p.isalnum()) --> output --> False
+
+> isalpha()- Returns True if all characters in the string are in the alphabet
+s="bottle"
+print(s.isalpha()) --> output --> True
+> isdigit()- Returns True if all characters in the string are digits
+s="200"
+print( s.isdigit()) --> output --> True
+> islower()-Returns True if all characters in the string are lower case
+e="lower"
+print(e.islower()) --> output --> True
+> isupper() - Returns True if all characters in the string are upper case
+f= "UPPER"
+print(f.isupper()) --> output --> True
+> isnumeric()- Returns True if all characters in the string are numeric
+g= "200"
+print(g.isnumeric()) --> output --> True
+> isspace()- Returns True if all characters in the string are whitespaces
+t=" "
+print(t.isspace()) --> output --> True
+> lstrip()- Remove spaces to the left of the string:
+x = txt.rstrip()
+print("of all fruits", x, "is my favorite") --> output --> of all fruits banana      is my favorite
+
+> rfind() -Searches the string for a specified value and returns the last position of where it was found
+txt = " bottle water"
+pritn(txt.rfind("ott")) --> output --> 2
+ 
+> rindex()- Searches the string for a specified value and returns the last position of where it was found
+txt = " bottle water"
+print(txt.rfind("ott")) --> output --> 2
+
+> rsplit()-Splits the string at the specified separator, and returns a list
+rstrip() -- Remove spaces to the right of the string:
+txt = "     banana     "
+x = txt.rstrip()
+print("of all fruits", x, "is my favorite") --> output --> of all fruits      banana is my favorite
+
+> split() - Splits the string at the specified separator, and returns a list
+txt = " bottle water"
+x = print(txt.rsplit()) --> output -->  ['bottle', 'water']
+
+>splitlines() - Splits the string at line breaks and returns a list
+txt = "Thank you for the music\nWelcome to the jungle"
+print(txt.splitlines()) --> output -->['Thank you for the music', 'Welcome to the jungle'] 
+
+> strip() - Remove spaces at the beginning and at the end of the string:
+txt = "     banana     "
+x = txt.strip()
+print("of all fruits", x, "is my favorite") --> output --> of all fruits banana is my favorite
+
+> swapcase()- Make the lower case letters upper case and the upper case letters lower case
+txt = "Hello My Name Is PETER"
+print(txt.swapcase()) --> output --> hELLO mY nAME iS peter
