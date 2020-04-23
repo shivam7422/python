@@ -184,4 +184,4 @@ print("of all fruits", x, "is my favorite") --> output --> of all fruits banana 
 
 > swapcase()- Make the lower case letters upper case and the upper case letters lower case
 txt = "Hello My Name Is PETER"
-print(txt.swapcase()) --> output --> hELLO mY nAME iS peter  njbfjgdfbgd
+print(txt.swapcase()) --> output --> hELLO mY nAME iS peter
