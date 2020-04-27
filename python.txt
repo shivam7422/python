@@ -136,21 +136,27 @@ print(p.isalnum()) --> output --> False
 > isalpha()- Returns True if all characters in the string are in the alphabet
 s="bottle"
 print(s.isalpha()) --> output --> True
+
 > isdigit()- Returns True if all characters in the string are digits
 s="200"
 print( s.isdigit()) --> output --> True
+
 > islower()-Returns True if all characters in the string are lower case
 e="lower"
 print(e.islower()) --> output --> True
+
 > isupper() - Returns True if all characters in the string are upper case
 f= "UPPER"
 print(f.isupper()) --> output --> True
+
 > isnumeric()- Returns True if all characters in the string are numeric
 g= "200"
 print(g.isnumeric()) --> output --> True
+
 > isspace()- Returns True if all characters in the string are whitespaces
 t=" "
 print(t.isspace()) --> output --> True
+
 > lstrip()- Remove spaces to the left of the string:
 x = txt.rstrip()
 print("of all fruits", x, "is my favorite") --> output --> of all fruits banana      is my favorite
@@ -243,3 +249,238 @@ There are four collection data types in the Python programming language:
 > Tuple is a collection which is ordered and unchangeable. Allows duplicate members. Denotes as ()
 > Set is a collection which is unordered and unindexed. No duplicate members. Denotes as {}
 > Dictionary is a collection which is unordered, changeable and indexed. No duplicate members. Denotes as {key:value}
+
+							     >> python Lists (27-04-2020)
+
+> List is a type of collection object which is used to store the data. We will denote List in []. For ex- s=[1,2,3,4].
+> List can contain duplicate values like s=[1,2,3,4,2,1,1].
+> It always starts with the indexing 0.
+
+Below are some in-built functions for the list-
+
+> append() - Adds an element at the end of the list
+s= [1,2,3,4]
+s.append(5)
+print(s) --> output -->  [1, 2, 3, 4, 5]
+
+> len() - to find the length of the list
+s= [1,2,3,4]
+print(len(s)) --> output --> 4
+
+> clear() - Removes all the elements from the list
+s= [1,2,3,4]
+s.clear
+print(s) --> output -->  []
+
+> count() - Returns the number of elements with the specified value
+s= [1,2,3,4]
+v= s.count(2)
+print(v) --> output -->  2
+
+> extend() - Add the elements of a list (or any iterable), to the end of the current list
+s= [1,2,3,4]
+b= [5,6,7,8]
+s.extend(b)
+print(s) --> output -->  [1, 2, 3, 4, 5, 6, 7, 8]
+
+> index() - Returns the index of the first element with the specified value
+s= [1,2,3,4]
+print(s.index(1)) --> output -->  1
+
+> insert() - Adds an element at the specified position
+s= [1,2,3,4]
+s.insert(4,5)
+print(s) --> output -->  [1, 2, 3, 4, 5]
+
+> pop() - Removes the element at the specified position
+s= [1,2,3,4]
+s.pop(2)
+print(s) --> output -->  [1, 2, 4]
+
+> remove() - Removes the item with the specified value
+s= [1,2,3,4]
+s.remove(3)
+print(s) --> output -->  [1, 2, 4]
+
+> reverse() - Reverses the order of the list
+s= [2,3,4,1]
+s.reverse 
+print(s) --> output -->  [1, 2, 3, 4]
+
+> sort() - Sorts the list
+s= [2,3,4,1]
+s.sort() #By default it will give the arrange the order in ascending. To make it we have to use reverse=True
+print(s) --> output -->  [1, 2, 3, 4]
+s.sort(reverse=True)
+print(s) --> output --> [4, 3, 2, 1]
+
+> How to check if any item exits in the list
+s=[1,2,3,4]
+if(1 in s):
+  {
+print(" statement is True")
+}
+else:
+  {
+print(" statement is False")
+} # --> output --> statement is True
+
+> Join 2 or more lists
+s= [1,2,3,4]
+b= [5,6,7,8]
+c=[9,10,11,12]
+d=s+b+c
+print(d) --> output --> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+
+									>> Tuple - 
+
+> Tuple is also a type of collection object which is used to store the data. We will denote List in (). For ex- s=(1,2,3,4).
+> Tuple can contain duplicate values like s=(1,2,3,4,2,1,1).
+> It always starts with the indexing 0.
+> The main advantage of having tuple is because it is IMMMUTABLE which means once created we can't change anything.
+
+	> Things which we can't do on tuple-
+		> insert
+		> append
+		> pop
+		> clear
+		> sort
+		> remove
+		> extend
+		> del
+
+	> Things which we can do on tuple are mentioned below- 
+
+> To print all the records-
+
+thistuple = ("apple", "banana", "cherry")
+for x in thistuple:
+  print(x) 
+
+output are mentioned below - 
+apple
+banana
+cherry
+
+> We can check the length and item in the tuple how we have done in the list.
+
+> How to create a tuple with a single record- If you are going to create a tuple like this s= "apple" then python will consider this as a string not a tupele. 
+Let's try-
+s="apple"
+print(s) --> output --> apple
+print(type(s)) --> output --> <class 'str'>
+
+To create a tuple with a single record we have to use comma(,) after the records- for ex-
+s=("apple",)
+print(s) --> output --> apple
+print(type(s)) --> output --> <class 'tuple'>
+
+>> Tuple is having 2 functions which are used below-
+
+> Count- Returns the number of times a specified value occurs in a string
+s=("apple","banana","banana")
+v=s.count("banana")
+print(v) --> output --> 2
+
+> index() - Searches the tuple for a specified value and returns the position of where it was found.
+
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.index(8)
+print(x) --> output --> 3
+
+									>> Set-
+
+> Set is also a type of collection object which is used to store the data. We will denote List in {}. For ex- s={1,2,3,4}.
+> Set doesn't contain duplicate values like s={1,2,3,4,2,1,1} and if you run the program you will get the distinct ouput. Here the output will be {1, 2, 3, 4}
+> The most important factor is set doesn't contain any indexes and the stored data is unordered, which means we have to know the values of the set because
+we can't perform any action based on indexes.
+
+add() - Adds an element to the set
+s = {"apple", "banana", "lion"}
+s.add(" cow")
+print(s) --> output --> {'cow', 'lion', 'apple', 'banana'}
+ 
+clear() - Removes all the elements from the set
+s = {"apple", "banana", "lion"}
+print(s) --> output --> {}
+
+discard() - Remove the specified item
+s = {"apple", "banana", "lion"}
+s.discard("apple")
+print(s) --> output --> {"banana", "lion"}
+ 
+pop() - Removes an element from the set
+s = {"apple", "banana", "lion"}
+s.pop()
+print(s) --> output --> {"banana", "lion"}
+ 
+remove() - Removes the specified element
+s = {"apple", "banana", "lion"}
+s.remove("lion")
+print(s) --> output --> {"apple", "banana"}
+ 
+union() - Return a set containing the union of sets
+s = {"apple", "banana", "apple"}
+g= {"more","cream"}
+h= s.union(g)
+print(h) --> output --> {'more', 'cream', 'apple', 'banana'}
+ 
+update() - Update the set with the union of this set and others
+s = {"apple", "banana", "lion"}
+s.update(["more","pig"])
+print(s) --> output --> {'apple', 'banana', 'more', 'lion', 'pig'}
+
+IMP POINTS-
+
+>> remove and discard are for deleting the records. The main difference between both of them is the item which you are going to remove from the set is not present, remoce will 
+throw the error but discard will not.
+>> update and union are to update the set, but union method will combine 2 sets where as update method will insert the set of 1st record into 2nd one.
+
+									>> Dictionary
+
+> Dictionary are stored in the form of key and value pair, in the curly brackets. For ex- {key:value}
+> Left side called key and right side called value.
+> Dictionary is unordered and indexed.
+
+>> Below function can be used with Dictionary--
+
+clear() - Removes all the elements from the dictionary
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+car.clear()
+print(car) --> output --> {}
+
+fromkeys() - Returns a dictionary with the specified keys and value
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+print(car.fromkeys()) --> output -->
+
+get() - Returns the value of the specified key
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+print(car.get("brand")) --> output --> Ford
+
+items() - Returns a list containing a tuple for each key value pair
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+print(car.get(items)) --> output --> dict_items([('brand', 'Ford'), ('model', 'Mustang'), ('year', 1964)])
+
+keys() - Returns a list containing the dictionary's keys
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+print(car.keys()) --> output --> dict_keys(['brand', 'model', 'year'])
+
+values() - Returns a list of all the values in the dictionary
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+print(car.values()) --> output --> dict_values(['Ford', 'Mustang', 1964])
+
+pop() - Removes the element with the specified key
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+print(car.pop("brand")) --> output --> Ford
+print(car) --> output --> {'model': 'Mustang', 'year': 1964}
+
+popitem() - Removes the last inserted key-value pair
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+print(car.popitem()) --> output --> ('year', 1964)
+print(car) --> output --> {'brand': 'Ford', 'model': 'Mustang'}
+
+update() - Updates the dictionary with the specified key-value pairs
+car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
+car.update({"brand":"Audi"})
+print(car) --> output --> {'brand': 'Audi', 'model': 'Mustang', 'year': 1964}
