@@ -84,6 +84,10 @@ print (d) ->>>output--> TypeError: can only concatenate str (not "int") to str
 s=200
 d= " the number is {}"
  print(d.format(s))  -->> output- the number is 200.
+ 
+ u=16
+v= " {} is my age"
+print(v.format(u)) -->> output- 16 is my age
 
 we can work with multiple numbers like-
 
