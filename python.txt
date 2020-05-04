@@ -89,6 +89,8 @@ d= " the number is {}"
 v= " {} is my age"
 print(v.format(u)) -->> output- 16 is my age
 
+Note- We will add curely brackets in the string where we have to add the integer.
+
 we can work with multiple numbers like-
 
 s=200
