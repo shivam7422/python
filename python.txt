@@ -8,21 +8,16 @@ Python's design philosophy emphasizes code readability with its notable use of s
 									
 									Lets get started
 
-print- > Anyting which you want to display on your system or wherever
-Type-> what type of data which you have to get.
-a=10  (= assigning the value to the variable)
-a==10 (== comparing left side to the right side )
-
 >> Variables- Where we have to store the values are called variables. For ex:- x=10. Here x-> variable and 10 is value.
 
 >> Data Types- Types where we can store the data like string, integer, float etc.
 
-Text Type:	str (String)
-Numeric Types:	int(integer), float, complex
+Text Type:	str
+Numeric Types:	int, float, complex
 Sequence Types:	list, tuple, range
 Mapping Type:	dict
 Set Types:	set, frozenset
-Boolean Type:	bool (True or false)
+Boolean Type:	bool
 Binary Types:	bytes, bytearray, memoryview
 
 For ex-
@@ -41,8 +36,6 @@ x = True					bool
 x = b"Hello"					bytes	
 x = bytearray(5)				bytearray	
 x = memoryview(bytes(5))			memoryview	
-
-
 
 >> Python casting- There may be times when you want to specify a type on to a variable. This can be done with casting. There are 3 types to do-
 
@@ -67,11 +60,6 @@ x = str("s1") # x will be 's1'
 y = str(2)    # y will be '2'
 z = str(3.0)  # z will be '3.0' 
 
-Note:
-
-	If any string is written with only alphabet or alphaneumeric it can't be converted into float or int.
-	If any string is only having digits we can convert into float or int.
-
 							>> python String (23-APR-2020)
 
 - We can't concatenate the string with the numbers( it can be any string). To do this, we have to use FORMAT keyword. Below is the example-
@@ -84,12 +72,6 @@ print (d) ->>>output--> TypeError: can only concatenate str (not "int") to str
 s=200
 d= " the number is {}"
  print(d.format(s))  -->> output- the number is 200.
- 
- u=16
-v= " {} is my age"
-print(v.format(u)) -->> output- 16 is my age
-
-Note- We will add curely brackets in the string where we have to add the integer.
 
 we can work with multiple numbers like-
 
@@ -502,3 +484,125 @@ update() - Updates the dictionary with the specified key-value pairs
 car =	{"brand": "Ford",  "model": "Mustang",  "year": 1964}
 car.update({"brand":"Audi"})
 print(car) --> output --> {'brand': 'Audi', 'model': 'Mustang', 'year': 1964}
+
+									User input-
+
+We have to use input keyword to get the input from the user. By default input type is STRING. To convert into other format we have to use int, float. for ex-
+
+a= int(input(" Enter the 1st number "))
+b= int(input(" Enter the 2nd number "))
+print(type(a))
+print(type(b))
+c=a+b
+print(c)
+
+									Condtional Statements
+
+Python supports the usual logical conditions from mathematics:
+
+    Equals: a == b
+    Not Equals: a != b
+    Less than: a < b
+    Less than or equal to: a <= b
+    Greater than: a > b
+    Greater than or equal to: a >= b
+
+In python there are 3 conditonal statements-
+
+1. If
+2. If->else
+3. If->elif->else
+
+>> If else-> In if, IF the condition is true then it will execute that part if it is wrong then it will execute the ELSE part. For ex-
+
+a=1
+if (a==1):
+    print("correct")
+else:
+    print("wrong")
+
+>> if-elif-else-> elif is a combination of (else+if) which means if not then execute the other one. The reason why we are using else in seperate because if all
+the logics are failed then we need something to print as a output so for that we need ELSE. for ex-
+
+a=4
+if(a==1):
+    print("one")
+elif(a==2):
+    print("two")
+elif(a==3):
+    print("three")
+elif(a==4):
+    print("four")
+
+output->4
+
+Here we have given input as 4, but what if a=5 then in the above program we will not get any output. To get the output we need seperate ELSE condition. For ex-
+
+a=5
+if(a==1):
+    print("one")
+elif(a==2):
+    print("two")
+elif(a==3):
+    print("three")
+elif(a==4):
+    print("four")
+else:
+    print("wrong input")
+
+										Looping Statements-
+Python has two primitive loop commands:
+
+    while loops
+    for loops
+
+>> while -
+
+> While loop holds expression.
+> Expression gives the result as Boolean type means either true or false. 
+> If the result is true, then while loop executes till condition reaches to false 
+> If the result is false, then while loop terminates. 
+> As per while loop syntax, the checking of expression will be done at first only.
+> So, if expression returns false then it displays nothing. 
+ 
+ For ex-
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+
+>> For-
+
+> A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+
+> Loop through the letters in the word "banana":
+
+for x in "banana":
+	print(x)
+										Break and continue statement-
+ 
+Break- With the break statement we can stop the loop before it has looped through all the items. We can use break with if, ifelif, for. For ex-
+
+fruits=["apple","banana","cherry"]
+for s in fruits:
+    if(s=="banana"):
+        break
+    print(s)
+
+output- aaple
+
+Continue- With the continue statement we can stop the current iteration of the loop, and continue with the next. We can use break with if, ifelif, for.
+
+fruits=["apple","banana","cherry"]
+for s in fruits:
+    if(s=="banana"):
+        break
+    print(s)
+
+output- 
+apple
+cherry
